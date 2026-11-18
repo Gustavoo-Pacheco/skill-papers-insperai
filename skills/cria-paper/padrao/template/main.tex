@@ -1,0 +1,45 @@
+% main.tex: esqueleto do relatório técnico do Insper AI (refaz-paper e cria-paper)
+% Ordem e regras das seções: padrao/estrutura.md. Redação: padrao/guia-de-estilo.md.
+% Opções da classe: [english] para inglês; [numerico] para citações [1] em vez de autor-ano.
+\documentclass{insperai}
+
+\title{[Título do trabalho]}
+% \subtitulo{[Subtítulo opcional]}
+\author{[Autor 1] \and [Autor 2]}   % blocos centralizados; \AND quebra a linha de autores
+% \afiliacao{Insper AI, Insper}      % padrão
+% \email{contato@insperai.com.br}    % padrão
+% \data{18 de novembro de 2026}      % padrão: hoje
+\resumo{[Resumo de 150 a 250 palavras: problema, o que foi feito, resultado principal e o que ele significa.]}
+
+\begin{document}
+\maketitle
+
+\section{Introdução}
+% Contexto e problema. Termina com UM parágrafo de contribuições, sem lista.
+
+\section{Trabalhos relacionados}
+
+\section{Método}
+% Pode ter subseções: Dados, Modelo, Protocolo, Métricas.
+
+\section{Resultados}
+% Figuras: \begin{figure}[tbp]\centering\includegraphics[width=\linewidth]{figura.pdf}
+%          \legenda{Título.}{Descrição.}\label{fig:x}\end{figure}   (figure* para a largura toda)
+% Tabelas: booktabs (\toprule, \midrule, \bottomrule), sem linhas verticais;
+%          \linhadestaque antes da linha do método proposto.
+
+\section{Limitações}
+
+\section{Código e dados}
+% Um parágrafo só: onde está o código (URL e commit/tag), o que tem lá, de onde vêm os dados e a licença.
+
+\section{Conclusão}
+
+% \section*{Contribuições dos autores}   % opcional
+% \section*{Ética e impacto}             % opcional
+
+\bibliography{refs}
+
+% \appendix                               % opcional
+% \section{Hiperparâmetros}
+\end{document}

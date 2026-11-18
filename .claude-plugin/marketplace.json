@@ -1,0 +1,13 @@
+{
+  "name": "insperai",
+  "owner": {
+    "name": "Insper AI"
+  },
+  "plugins": [
+    {
+      "name": "skill-papers-insperai",
+      "source": "./",
+      "description": "Formata, refaz e cria papers no padrão do Insper AI."
+    }
+  ]
+}

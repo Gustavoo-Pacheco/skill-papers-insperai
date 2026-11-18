@@ -1,0 +1,10 @@
+{
+  "name": "skill-papers-insperai",
+  "version": "0.1.0",
+  "description": "Skills do Claude para padronizar os papers do Insper AI: formata-paper, refaz-paper e cria-paper.",
+  "author": {
+    "name": "Insper AI"
+  },
+  "repository": "https://github.com/Gustavoo-Pacheco/skill-papers-insperai",
+  "license": "MIT"
+}

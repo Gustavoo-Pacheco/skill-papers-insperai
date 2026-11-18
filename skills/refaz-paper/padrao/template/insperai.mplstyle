@@ -1,0 +1,26 @@
+# insperai.mplstyle: estilo dos gráficos gerados pelas skills (matplotlib)
+# Uso: plt.style.use("padrao/template/insperai.mplstyle")
+# Paleta validada para daltonismo (menor ΔE de 18,7 sob protanopia). Veja padrao/guia-de-estilo.md.
+# Ordem: Azul Cobalto (método proposto), magenta médio, azul-noite (baseline), cinza (referência).
+# Com mais de 4 séries, diferencie também por marcador ou tipo de linha.
+
+axes.prop_cycle: cycler('color', ['0058B8', 'D86FE0', '1E2A44', 'A3A8B0'])
+axes.spines.top: False
+axes.spines.right: False
+axes.grid: True
+axes.axisbelow: True
+grid.alpha: 0.3
+font.family: serif
+font.serif: XCharter, Charter, Bitstream Charter, DejaVu Serif
+font.size: 8
+axes.titlesize: 8
+axes.labelsize: 8
+legend.fontsize: 7
+xtick.labelsize: 7
+ytick.labelsize: 7
+figure.figsize: 3.3, 2.2
+figure.dpi: 200
+savefig.dpi: 300
+savefig.bbox: tight
+legend.frameon: False
+lines.linewidth: 1.4

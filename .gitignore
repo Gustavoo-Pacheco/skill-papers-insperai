@@ -1,0 +1,27 @@
+# Material de teste de outros alunos: nunca versionar (repo público)
+tests/privado/
+
+# Pacotes gerados pelo build (vão para as Releases do GitHub)
+dist/
+
+# Saídas das skills geradas em testes
+*-insperai/
+tests/saidas/
+
+# LaTeX
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Sistema
+.DS_Store
