@@ -13,7 +13,11 @@ Cada versão vira uma Release no GitHub, com os `.zip` de `dist/` anexados.
 ### Alterado
 - Capa: título, autores e resumo no estilo de *Attention Is All You Need* (título entre filetes, autores em blocos centralizados, resumo centralizado e recuado), no lugar do título à esquerda e do resumo em caixa.
 
+### Corrigido
+- `verificar_texto.py` acusava diferenças falsas quando as figuras mudavam de lugar (o que a capa nova provocou no Wakely): o texto de dentro das figuras e tabelas caía no meio de frases e de palavras hifenizadas. Agora esse texto fica de fora nos dois PDFs (as regiões vêm de `extrair_entrada.py`), as legendas são comparadas à parte, e índices e expoentes (F₂) são tratados igual dos dois lados.
+
 ### Adicionado
+- Testes: modo `cria-cego` (só o repositório, sem o paper do grupo), escolha de modelo e esforço em `rodar_teste_skill.sh` e página de comparação `tests/comparar_versoes.py`.
 - Scaffold do projeto: `padrao/`, as três skills, `build.py`, testes e docs.
 - Análise de 39 papers de referência em `docs/referencias.md`.
 - Classe `insperai.cls` (capa com logo, legendas "Figura N | Título.", `\linhadestaque`, `\secaofaltando`, `\notacapa`) e estilos de bibliografia em português.

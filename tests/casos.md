@@ -33,10 +33,13 @@ Para o caso autor-ia, o mesmo fluxo com `tests/fixtures/autor-ia.md`, sem `--ori
 
 ## Testes das skills (Claude Code sem interface)
 
-`tests/rodar_teste_skill.sh formata|refaz|cria <pasta-fora-do-repo>` roda a skill com o plugin deste repositório (`--plugin-dir`). Como não há ninguém para responder, o prompt em `tests/prompts/<skill>.md` define um oráculo e a sessão registra perguntas e respostas em `<pasta>/perguntas.md`:
+`[MODELO=sonnet|opus] [ESFORCO=high] tests/rodar_teste_skill.sh formata|refaz|cria|cria-cego <pasta-fora-do-repo>` roda a skill com o plugin deste repositório (`--plugin-dir`). Como não há ninguém para responder, o prompt em `tests/prompts/<teste>.md` define um oráculo e a sessão registra perguntas e respostas em `<pasta>/perguntas.md`:
 - **formata:** respostas fixas (LaTeX e PDF, autor-ano, promover o que existir, marcador no que faltar).
 - **refaz:** o paper original responde aos conflitos.
 - **cria:** recebe só o repositório; o paper original responde à entrevista, sem servir de fonte de texto.
+- **cria-cego:** recebe uma cópia limpa do repositório (sem `.git` e sem a pasta `paper/` do grupo) e responde às próprias perguntas só com o que o repo sustenta. Depois, procure no `sessao.jsonl` acessos ao paper do grupo.
+
+`tests/comparar_versoes.py <original.pdf> --saida tests/saidas/comparacao --versao "Rótulo|skill|pasta|repo|descrição[|cego]" ...` gera uma página HTML local que compara o original com as versões: números, capas, estrutura, números-chave do original, resumos, perguntas e todas as páginas. A página tem o paper de outros alunos: não publique.
 
 ### O que cada skill precisa provar
 
@@ -55,7 +58,7 @@ Para o caso autor-ia, o mesmo fluxo com `tests/fixtures/autor-ia.md`, sem `--ori
 **cria-paper**
 - [ ] A entrevista acontece antes da escrita (`perguntas.md`).
 - [ ] `verificar_checklist.py --skill cria` sem falhas.
-- [ ] `tests/verificar_cobertura.py <original> <novo>/main.tex --repo <repo> --extra <pasta>/perguntas.md`: nenhum número sem fonte. A cobertura dos números-chave do original é medida e registrada, sem meta fixa.
+- [ ] `tests/verificar_cobertura.py <original> <novo>/main.tex --repo <repo> --extra <pasta>/perguntas.md`: nenhum número sem fonte. A cobertura dos números-chave do original é medida e registrada, sem meta fixa. No cria-cego, com `--cego` (o original não conta como fonte).
 
 ## Gerais
 - [ ] `python3 build.py --check` passa.
