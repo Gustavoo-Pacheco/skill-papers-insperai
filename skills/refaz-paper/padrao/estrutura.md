@@ -33,10 +33,11 @@ Como reconhecer as seções (usado por `scripts/verificar_checklist.py`):
 
 Montada pela classe (`\maketitle`):
 - Logo do Insper AI no canto superior esquerdo e a data no canto superior direito.
-- Título alinhado à esquerda, com subtítulo opcional.
-- Autores e afiliação ("Insper AI, Insper").
-- E-mail de contato do lab: **contato@insperai.com.br**.
-- Resumo destacado, na largura toda, acima das duas colunas.
+- Título, autores e resumo no estilo de *Attention Is All You Need* (NeurIPS), acima das duas colunas:
+  - **Título** centralizado entre um filete de 4 pt (acima) e um de 1 pt (abaixo), com subtítulo opcional.
+  - **Autores** em negrito, em blocos centralizados lado a lado: `\author{Ana Souza \and Bruno Lima}`. `\AND` força uma nova linha de autores. Quem quiser afiliação ou e-mail próprio escreve dentro do bloco: `\author{Ana Souza \\ Outra Universidade \\ \texttt{ana@exemplo.com} \and ...}`.
+  - **Afiliação** ("Insper AI, Insper") e **e-mail do lab** (contato@insperai.com.br, em fonte monoespaçada) centralizados abaixo dos autores.
+  - **Resumo** com o título ("Resumo" ou "Abstract") centralizado em negrito e o texto justificado, recuado dos dois lados (80% da largura), sem caixa.
 - Sem palavras-chave e sem link do repositório na capa. O link vai na seção "Código e dados".
 - **IA nunca é autora.** Se o paper de entrada listar uma (por exemplo, "Claude (Anthropic)"), a skill remove e avisa no resumo da entrega.
 
